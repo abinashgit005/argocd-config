@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devrepo
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devrepo
+  template:
+    metadata:
+      labels:
+        app: devrepo
+    spec:
+      containers:
+      - name: devrepo
+        image: asia-south1-docker.pkg.dev/poc101-500018/gcppoc/devrepo:latest
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: devrepo-service
+  namespace: dev
+spec:
+  selector:
+    app: devrepo
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
