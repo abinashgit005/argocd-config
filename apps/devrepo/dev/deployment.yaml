@@ -20,9 +20,9 @@ spec:
     spec:
       containers:
       - name: devrepo
-        image: asia-south1-docker.pkg.dev/poc101-500018/gcppoc/devrepo:834318e1b8be5269e61ce44b6ed3ad59c2824c44
+        image: asia-south1-docker.pkg.dev/poc101-500018/gcppoc/devrepo:3c395c6d1440ea56b5bed0979b5b94b9e7338a16
         ports:
-        - containerPort: 8080
+        - containerPort: 80
         resources:
           requests:
             memory: "128Mi"
@@ -42,5 +42,5 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 8080
+    targetPort: 80
   type: LoadBalancer
