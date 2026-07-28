@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: devrepo
-        image: asia-south1-docker.pkg.dev/poc101-500018/gcppoc/devrepo:949a9400dc5a77e1446cd6610ce87cd6bed52c02
+        image: asia-south1-docker.pkg.dev/poc101-500018/gcppoc/devrepo:84b031e8c70d392547454b77c7c1cc0338c7acd0
         ports:
         - containerPort: 80
         resources:
