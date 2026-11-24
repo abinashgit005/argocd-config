@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: devrepo
-        image: us-central1-docker.pkg.dev/central-pipeline-515411/poc-repo/devrepo:2a35817b27acb83f4ca9b564ee9cf91201b5e884
+        image: us-central1-docker.pkg.dev/central-pipeline-515411/poc-repo/devrepo:6ccc87b94113e55183f9b4f367f3efad60df86ea
         ports:
         - containerPort: 80
         resources:
